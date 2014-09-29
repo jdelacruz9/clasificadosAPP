@@ -1,0 +1,51 @@
+<!doctype html>
+<title> Piloto Twitter </title> 
+{% if users %}
+	{% for user in users %}
+			<p> {{user.id}} {{user.nombre}} {{user.username}}</p>
+<!-- 			<p> {{user.email}} </p>
+			<p> {{user.password}} </p>
+			<p> {{user.id}} </p>
+			<p> {{user.telefono}} </p> -->
+	{% endfor%}
+{% else %}
+	<p>No hay users, corillo</p>
+{% endif%}
+
+{% if merca %}
+	{% for item in merca %}
+			<p> {{item.id}} {{item.precio}} {{item.pueblo}} {{item.u_id}} </p>
+	{% endfor%}
+{% else %}
+	<p>No hay users, Merca</p>
+{% endif%}
+
+
+{% if transp %}
+	{% for item in transp %}
+			<p> {{item.m_id}} {{item.tipot}} {{item.year}} {{item.modelo}} {{item.marca}} </p>
+	{% endfor%}
+{% else %}
+	<p>No hay users, Transportacion</p>
+{% endif%}
+
+{% if br %}
+	{% for item in br %}
+			<p> {{item.id}} {{item.tipobr}} {{item.cuartos}} {{item.bathrooms}} {{item.pisos}} </p>
+	{% endfor%}
+{% else %}
+	<p>No hay users, BienesRaices</p>
+{% endif%}
+
+{% if masco %}
+	{% for item in masco %}
+			<p> {{item.m_id}} {{item.tipom}} {{item.raza}} {{item.cantidad}} {{item.macho}} {{item.hembra}} </p>
+	{% endfor%}
+{% else %}
+	<p>No hay users, Mascotas</p>
+{% endif%}
+
+<form action='/subefoto' method='post' enctype="multipart/form-data">
+	<input type='file' name='foto'>
+	<input type="submit" value="Submit">
+</form>

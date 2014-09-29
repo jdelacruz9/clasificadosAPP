@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Grid Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/grid.css" rel="stylesheet">
+    <link href="/css/round.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container-fluid">
+    <div class="text-center">
+      <div class="page-header">
+        <img src="/css/logonegro.png" style="width:90%;"/>
+      </div>
+   </div>
+
+
+   <!-- <div class="row">
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>-->
+
+{% if not g.user.is_authenticated()%}
+      <div class="container">
+        <div class="row">
+          <div class="text-center">
+           <a href="login"><button id="singInButton" name="signInButton" type="button" class="btn btn-primary btn-block">Sign in</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+        <div class="text-center">
+       <a href="register"><button id="singUpButton" name="signUpButton" type="button" class="btn btn-primary btn-block">Sign Up</button></a>
+        </div>
+        </div>
+
+      </div>
+{% endif %}
+
+{% if g.user.is_authenticated()%}
+      <div class="row">
+        <div class="col-md-6">
+          <a href="/vender" > <button type="button" class="btn btn-success btn-block"> Vender</button> </a>
+       </div>
+        <div class="col-md-6">
+          <button type="button" class="btn btn-success btn-block"> Perfil </button>
+        </div>
+       <div class="col-md-6">
+          <form action="/logout" class="btn btn-success btn-block" role="form">
+              <button type="submit" class="btn btn-success">Sign out</button>
+          </form>
+        </div>
+      </div>
+{% endif %}
+
+
+        <div class="text-center">
+          <div class="col-xs-6" style="padding:inherit;border:none;background-color:white;">
+        <button id="Sale/RentButton" name="Sale/RentButton" type="button" class="btn btn-default btn-block" style="background-color:skyblue;">
+          <a href="/br"><img src="/css/bienesraices.png" style="width:80%;height:80%;"/></a>
+          <p style="color:white;font-weight: 500;">Bienes Raices</p>
+        </button>
+      </div>
+        <div class="col-xs-6" style="padding:inherit;border:none;background-color:white;">
+        <button  id="AutosButton" name="AutosButton" type="button" class="btn btn-default btn-block" style="background-color:khaki;">
+          <img src="/css/transportacion.png" style="width:80%;height:80%;"/>
+            <p style="color:white;font-weight: 500;">Transportacion</p>
+        </button>
+      </div>
+      </div>
+
+        <div class="text-center">
+        <div class="col-xs-6" style="padding:initial;border:none;background-color:white;">
+        <button id="MascotasButton" name="MascotasButton" type="button" class="btn btn-default btn-block" style="background-color:lightpink;">
+          <img src="/css/mascotas.png" style="width:80%;height:80%;"/>
+            <p style="color:white;font-weight: 500;">Mascotas</p>
+        </button>
+      </div>
+        <div class="col-xs-6" style="padding:initial;border:none;background-color:white;">
+         <button  id="EmpleosButton" name="EmpleosButton" type="button" class="btn btn-default btn-block" style="background-color:lightgreen">
+            <img src="/css/empleo.png" style="width:80%;height:80%;"/>
+              <p style="color:white;font-weight: 500;">Empleos</p>
+        </button>      
+      </div>
+      </div>
+
+
+        <div class="text-center">
+        <div class="col-xs-6" style="padding:initial;border:none;background-color:white;">
+         <button id="ArticulosButton" name="ArticulosButton" type="button" class="btn btn-default btn-block" style="background-color:mediumaquamarine">
+          <img src="/css/articulos.png" style="width:80%;height:80%;"/>
+            <p style="color:white;font-weight: 500;">Articulos</p>
+        </button>
+      </div>
+        <div class="col-xs-6" style="padding:initial;border:none;background-color:white;">
+         <button  id="ServiciosButton" name="ServiciosButton" type="button" class="btn btn-default btn-block" style="background-color:sandybrown;">
+            <img src="/css/servicios.png" style="width:80%;height:80%;"/>
+              <p style="color:white;font-weight: 500;">Servicios</p>
+        </button>   
+      </div>
+      </div>
+
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+

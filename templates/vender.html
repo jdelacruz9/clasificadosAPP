@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheet" rel="stylesheet">
+
+  </head>
+
+  <body >
+  <div class="container">
+     <form action="/subefoto" method="post" class="form-signin" role="form" enctype="multipart/form-data">
+        <h1 class="form-signin-heading"> <p style="color:white">Bienvenido a</p></h1>      
+        <input style="width:100%;" id="margen" type="text" class="form-control" placeholder="Categoria" name="categoria" required autofocus>
+        <input style="width:100%;" id="margen" type="text" class="form-control" placeholder="Tipo" name="tipo" required autofocus>
+        <input style="width:100%;" id="margen" type="text" class="form-control" placeholder="Precio" name="precio" required autofocus>
+        <textarea id="margen" style="width:100%;" name = "message" placeholder="Descripcion"class="form-control" rows="6"></textarea>
+        <!-- <input style="width:100%;" id="margen" type="text" class="form-control" placeholder="Descripcion" name="descripcion" required autofocus> -->
+        <input type='file' name='foto'>
+          <a href="/"><button type="button" class="btn btn-primary btn-block">Cancelar</button></a>
+          <button type="submit" class="btn btn-primary btn-block">Vender</button>
+      </form>
+  </div>
+        
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
